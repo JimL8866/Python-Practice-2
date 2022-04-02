@@ -79,25 +79,64 @@
 # ]
 # print(m)
 
-import smtplib
-email = "zeric206@gmail.com"  # sender email
-pwd = "1234567PO"  # sender pwd
-addrs_list = ["hahahwang123@gmail.com",
-              "liucy035@gmail.com", "jimliujob@gmail.com"]
+# import smtplib
+# email = "zeric206@gmail.com"  # sender email
+# pwd = "1234567PO"  # sender pwd
+# addrs_list = ["hahahwang123@gmail.com",
+#               "liucy035@gmail.com", "jimliujob@gmail.com"]
 
 
-with smtplib.SMTP("smtp.gmail.com") as connection:  # create obj
-    connection.starttls()
-    connection.login(user=email, password=pwd)
-    for item in addrs_list:
+# with smtplib.SMTP("smtp.gmail.com") as connection:  # create obj
+#     connection.starttls()
+#     connection.login(user=email, password=pwd)
+#     for item in addrs_list:
 
-        connection.sendmail(
-            from_addr=email,
-            to_addrs=item,
-            msg="Subject:How are you?\n\nThis is the body of my email"
-        )
+#         connection.sendmail(
+#             from_addr=email,
+#             to_addrs=item,
+#             msg="Subject:How are you?\n\nThis is the body of my email"
+#         )
 
 # import datetime as dt
 # now = dt.datetime.now()
 # print(type(now))
 # print(now.year)
+
+
+# import requests
+# from xml.etree import ElementTree as ET
+
+
+# def xml_to_list(city):
+#     data_list = []
+#     url = "http://ws.webxml.com.cn//WebServices/WeatherWebService.asmx/getWeatherbyCityName?theCityName={}".format(city)
+#     res = requests.get(url=url)
+#     print(res)
+#     root = ET.XML(res.text)
+#     for node in root:
+#         data_list.append(node.text)
+#     return data_list
+
+
+# result = xml_to_list("北京")
+# print(result)
+
+# def num(x):
+#     num = x +8
+
+
+# res = num(8)
+# print(res)
+
+
+# list1 = [1, 3]
+# print(id(list1))
+
+# list1.append(4)
+# print(list1)
+# print(id(list1))   # list is mutable
+
+# str ="Hello#"
+# print(id(str))
+# str.replace("#","")
+# print(id(str))     # string is unmutable create new string
